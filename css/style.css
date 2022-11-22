@@ -6,4 +6,18 @@
   list-style: none;
   border: none;
   outline: none;
+}
+
+.container {
+  width: 1440px;
+  margin: auto;
+}
+
+.section1 {
+  height: 1500px;
+}
+.section1 .container {
+  max-width: 1332px;
+  padding: 50px 60px 0;
+  background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
 }/*# sourceMappingURL=style.css.map */
