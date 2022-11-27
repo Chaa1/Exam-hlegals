@@ -321,6 +321,10 @@ html {
   border-radius: 50%;
   background: #24A3FF;
   margin: 0 7.5px;
+  opacity: 20%;
+}
+.section5 .container .div-active {
+  opacity: 100%;
 }
 
 .section6 .grid-wrap {
@@ -347,10 +351,17 @@ html {
   width: 400;
   font-family: "TTNorms-Regular", sans-serif;
   line-height: 144%;
+  text-align: start;
 }
 .section6 .box1 {
   grid-area: box1;
   padding-top: 20px;
+}
+.section6 .box1 p {
+  font-size: 14px;
+  color: #F0145A;
+  width: 700;
+  font-family: "TTNorms-Bold", sans-serif;
 }
 .section6 .box2 {
   grid-area: box2;
@@ -387,4 +398,133 @@ html {
   width: 700;
   font-family: "TTNorms-Bold", sans-serif;
   line-height: 100%;
+}
+
+.section8 .grid-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "box1 box2 box3 box4" "box5 box6 box7 box8" "box9 box10 box11 box12";
+}
+
+.box1 {
+  grid-area: box1;
+  background: #1C4280;
+}
+
+.box2 {
+  grid-area: box2;
+  background: #323264;
+}
+
+.box2 {
+  grid-area: box2;
+  background: #323264;
+}
+
+.box3 {
+  grid-area: box3;
+  background: #F48B30;
+}
+
+.box4 {
+  grid-area: box4;
+  background: #9E4DC3;
+}
+
+.box5 {
+  grid-area: box5;
+  background: #FD9339;
+}
+
+.box6 {
+  grid-area: box6;
+  background: #E2E2E4;
+}
+
+.box7 {
+  grid-area: box7;
+  background: #C71C36;
+}
+
+.box8 {
+  grid-area: box8;
+  background: #DCF3F9;
+}
+
+.box9 {
+  grid-area: box9;
+  background: #EAEAEA;
+}
+
+.box10 {
+  grid-area: box10;
+  background: #282240;
+}
+
+.box11 {
+  grid-area: box11;
+  background: #1D4568;
+}
+
+.box12 {
+  grid-area: box12;
+  background: #000;
+}
+
+.section9 {
+  padding-top: 40px;
+}
+.section9 .p-publications {
+  font-size: 14px;
+  color: #24A3FF;
+  width: 700;
+  font-family: "TTNorms-Bold", sans-serif;
+  letter-spacing: 1px;
+  line-height: 17px;
+}
+.section9 .h3-header {
+  margin-top: 3px;
+  font-size: 42px;
+  color: #24A3FF;
+  width: 700;
+  font-family: "TTNorms-Bold", sans-serif;
+  line-height: 100%;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.section9 .grid-wrap {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "box1 box2 box3" "box1 box2 box3" "box1 box2 box3" "box1 box2 box3" "box1 box2 box3" "box1 box2 box3" "box1 box2 box3" "box1 box2 box3" "box4 box2 box3" "box4 box2 box3" "box4 box2 box3" "box4 box2 box3" "box4 box2 box3" "box4 box5 box3" "box4 box5 box3" "box4 box5 box3" "box4 box5 box6" "box4 box5 box6" "box4 box5 box6" "box4 box5 box6" "box4 box5 box6";
+}
+.section9 .grid-wrap .box1 {
+  padding: 20px;
+  grid-area: box1;
+  background: yellow;
+}
+.section9 .grid-wrap .box2 {
+  grid-area: box2;
+  background: green;
+}
+.section9 .grid-wrap .box3 {
+  grid-area: box3;
+  background: pink;
+}
+.section9 .grid-wrap .box4 {
+  grid-area: box4;
+  background: red;
+}
+.section9 .grid-wrap .box5 {
+  grid-area: box5;
+  background: blue;
+}
+.section9 .grid-wrap .box6 {
+  grid-area: box6;
+  background: orangered;
 }/*# sourceMappingURL=style.css.map */
