@@ -23,7 +23,7 @@ html {
     linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7a425e 87.53%);
   padding: 50px 0 0.1px;
   header {
-    width: 100%;
+    max-width: 100%;
     @include fb();
     margin-bottom: 247px;
   }
@@ -32,8 +32,21 @@ html {
     width: 50%;
   }
   .address-wrap,
+  .lessons,
   .menu ul {
     @include fb();
+  }
+  .burger-menu{
+    display: none;
+    .div{
+      width: 18px;
+      height: 1px;
+      background: $color-white;
+    }
+    .div2{
+      margin: 6px 0;
+    }
+
   }
   .menu ul {
     margin-left: 150px;
@@ -43,6 +56,9 @@ html {
   }
   .square-active {
     background: $color-pink;
+  }
+  .square2 p{
+    margin: 0 10px;
   }
   .address,
   .phone {
@@ -201,17 +217,26 @@ html {
 
 .section3 {
   background: $color-white;
-  margin: auto;
-  max-width: 1440px;
-  .line {
-    width: 1400px;
+  .container{
+    max-width: 1440px;
+    margin: auto;
+  }
+  
+  .line1 {
+    max-width: 1440px;
     height: 10px;
     border-radius: 0 0 12px 12px;
     background: $color-CA;
     margin: auto;
+    
   }
   .line2 {
-    width: 1360px;
+    max-width: 1360px;
+    height: 10px;
+    border-radius: 0 0 12px 12px;
+    background: $color-CA;
+    margin: auto;
+    
   }
 }
 
@@ -241,7 +266,6 @@ html {
       margin-bottom: 3px;
     }
     .description {
-      width: 827px;
       @include font(42px, $color-blue, 700, $font-TTNorms-Bold);
       line-height: 100%;
       background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
@@ -364,13 +388,18 @@ html {
     grid-template-areas:
       "box1 box2  box3  box4"
       "box5 box6  box7  box8"
-      "box9 box10 box11 box12"
-    ;
+      "box9 box10 box11 box12";
   }
 }
-.box{
+
+//отцентровал все картинки
+.box{ 
   @include fc();
+  img{
+    width: 50%;
+  }
 }
+
 .box1 {
   grid-area: box1;
   background: $color-1C;
@@ -426,7 +455,7 @@ html {
 
 .section9 {
   background: url("../images/section9-blure.png") repeat-x bottom,
-  linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
+    linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #f5f5fa 86.5%);
   padding-top: 40px;
   .p-publications {
     @include font(14px, $color-blue, 700, $font-TTNorms-Bold);
@@ -471,63 +500,69 @@ html {
       "box4 box5 box6"
       "box4 box5 box6"
       "box4 box5 box6"
-      "box4 box5 box6"
-    ;
+      "box4 box5 box6";
   }
-.box{
-  border-radius: 8px 8px 0px 0px;
-  background: $color-white;
-  .p1{
-    @include font(18px, $color-blue, 400, $font-TTNorms-Regular);
+  .box {
+    border-radius: 8px 8px 0px 0px;
+    background: $color-white;
+    img{
+      width: 100%;
+    }
+    .p1 {
+      @include font(18px, $color-blue, 400, $font-TTNorms-Regular);
+    }
+    .p2 {
+      margin: 10px 0 20px;
+      @include font(12px, $color-B3, 700, $font-TTNorms-Bold);
+    }
+    .p3 {
+      margin-top: 20px;
+      max-width: 372px;
+      @include font(14px, $color-black, 400, $font-TTNorms-Regular);
+      line-height: 138%;
+    }
   }
-  .p2{
-    margin: 10px 0 20px;
-    @include font(12px, $color-B3, 700, $font-TTNorms-Bold);
-  }
-  .p3{
-    margin-top: 20px;
-    max-width: 372px;
-    @include font(14px, $color-black, 400, $font-TTNorms-Regular);
-    line-height: 138%;
-  }
-}
   .box1 {
     padding: 20px;
     grid-area: box1;
   }
   .box2 {
     grid-area: box2;
-    .text-wrap{
+    .text-wrap {
       padding: 20px;
     }
   }
   .box3 {
     grid-area: box3;
-    .text-wrap{
+    .text-wrap {
       padding: 20px;
     }
   }
   .box4 {
     grid-area: box4;
-    .text-wrap{
+    .text-wrap {
       padding: 20px;
-      .p3{
-        color: #E6E6F0;
+      .p3 {
+        color: #e6e6f0;
       }
     }
   }
   .box5 {
     grid-area: box5;
     position: relative;
-    .btn{
+    .btn {
       width: 250px;
       height: 50px;
       border-radius: 12px;
       background: $color-blue;
       position: absolute;
-      bottom: 35px;
-      
-      a{
+      top:0;
+      left: 0;
+      left: 50%;
+      top: 74%;
+      transform: translate(-50%, -50%);
+
+      a {
         @include font(14px, $color-white, 700, $font-TTNorms-Bold);
       }
     }
@@ -537,23 +572,52 @@ html {
   }
 }
 
-.section10{
-  footer{
+.section10 {
+  footer {
     @include fb();
     flex-direction: row;
   }
   .left-wrap,
-  .right-wrap{
+  .right-wrap {
     max-width: 50%;
   }
-  .left-wrap{
-    background: green;
+  .left-wrap {
+    .point {
+      width: 6px;
+      height: 6px;
+      background: $color-B3;
+    }
   }
-  .right-wrap{
-    background: red;
+  .address-wrap {
+    @include fb();
+    .address{
+      @include font(16px, $color-darkblue, 400, $font-TTNorms-Regular);
+    }
+    .point{
+       margin: 0 10px 0 31px;
+    }
+    a{
+      @include font(12px, $color-blue, 400, $font-TTNorms-Bold);
+    }
+  }
+
+  .contact{
+    max-width: 360px;
+    margin-top: 22px;
+    @include fb();
+    .phone a{
+      @include font(16px, $color-darkblue, 400, $font-TTNorms-Regular);
+    }
+    .e-mail a{
+      @include font(16px, $color-blue, 400, $font-TTNorms-Bold);
+    }
+    
+  }
+
+  .right-wrap {
+    .end p{
+      margin-top: -43px;
+    }
+    
   }
 }
-
-
-
-
